@@ -186,7 +186,7 @@
 
     <string name="settings_title_profile">USER SETTINGS</string>
     <string name="settings_title_gcm">GOOGLE CLOUD MESSAGING (GCM)</string>
-    <string name="settings_title_config">Configuration</string>
+    <string name="settings_title_config">CONFIGURATION</string>
     <string name="settings_title_notifications">NOTIFICATIONS SETTINGS</string>
     <string name="settings_title_notifications_rules">Update Notifications Rules</string>
     <string name="settings_title_rooms">ROOMS</string>
