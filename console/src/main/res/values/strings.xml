@@ -184,14 +184,14 @@
 
     <string name="settings_webclient_push">To configure global notification settings (like rules), go find a webclient and hit Settings > Notifications.</string>
 
-    <string name="settings_title_profile">Profile information</string>
-    <string name="settings_title_gcm">Google cloud messaging (GCM)</string>
+    <string name="settings_title_profile">USER SETTINGS</string>
+    <string name="settings_title_gcm">GOOGLE CLOUD MESSAGING (GCM)</string>
     <string name="settings_title_config">Configuration</string>
-    <string name="settings_title_notifications">Notifications</string>
+    <string name="settings_title_notifications">NOTIFICATIONS SETTINGS</string>
     <string name="settings_title_notifications_rules">Update Notifications Rules</string>
-    <string name="settings_title_rooms">Rooms</string>
-    <string name="settings_title_commands">Commands</string>
-    <string name="settings_bugs_report">Bug Reports</string>
+    <string name="settings_title_rooms">ROOMS</string>
+    <string name="settings_title_commands">COMMANDS</string>
+    <string name="settings_bugs_report">BUG REPORTS</string>
 
     <string name="settings_config_console_version">matrixConsole version: %s</string>
     <string name="settings_config_sdk_version">SDK version: %s</string>
@@ -205,6 +205,9 @@
     <string name="settings_clear_cache">Clear cache</string>
     <string name="settings_display_public_rooms">Display public rooms with recents</string>
     <string name="settings_rage_shake">Rageshaking to submit bug reports</string>
+    <string name="settings_user_password_label">Change password</string>
+    <string name="settings_user_display_name_label">Display Name</string>
+
 
     <!-- Notification settings screen -->
     <string name="notification_settings_title">Notification Settings</string>
