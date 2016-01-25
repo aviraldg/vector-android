@@ -205,7 +205,7 @@
     <string name="settings_clear_cache">Clear cache</string>
     <string name="settings_display_public_rooms">Display public rooms with recents</string>
     <string name="settings_rage_shake">Rageshaking to submit bug reports</string>
-    <string name="settings_user_password_label">Change password</string>
+    <string name="settings_user_password_label">Change Password</string>
     <string name="settings_user_display_name_label">Display Name</string>
 
 
