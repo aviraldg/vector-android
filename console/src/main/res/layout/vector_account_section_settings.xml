@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vector_light_gray_color" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/settings_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/vector_silver_color"/>
+
+            <!-- User avatar setting -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="17sp"
+                    android:text="Profile Picture"
+                    android:id="@+id/settings_user_profile_picture_label"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp">
+
+                    <include layout="@layout/vector_room_round_avatar"
+                        android:id="@+id/settings_user_avatar"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/vector_light_gray_color"/>
+
+            <!-- User name setting -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="17sp"
+                    android:text="@string/settings_user_display_name_label"
+                    android:id="@+id/settings_user_display_name_label"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="A display name"
+                    android:textSize="17sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/settings_user_display_name_label"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:id="@+id/settings_user_display_name_edit_text"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/vector_light_gray_color"/>
+
+            <!-- Room topic -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FFF" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="17sp"
+                    android:gravity="center_vertical"
+                    android:text="@string/settings_user_password_label"
+                    android:id="@+id/settings_user_password_label"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A room topic"
+                    android:textSize="17sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/settings_user_password_label"
+                    android:gravity="right"
+                    android:id="@+id/settings_user_password_text"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/vector_light_gray_color"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/room_settings_saving_progress"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+</ScrollView>
