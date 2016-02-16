@@ -21,6 +21,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
+import android.content.pm.PackageInstaller;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -60,6 +61,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import im.vector.Matrix;
 import im.vector.R;
 import im.vector.db.VectorContentProvider;
 
@@ -299,6 +301,32 @@ public class VectorUtils {
      */
     public static void setRoomVectorAvatar(ImageView imageView, String roomId, String displayName) {
         VectorUtils.setMemberAvatar(imageView, roomId, displayName);
+    }
+
+    /**
+     * Set the image view given in parameter with the corresponding
+     * room avatar. The avatar is initialized with its default value,
+     * then updated with the server content if any.
+     *
+     * @param[out] aAvatarImageView_out room avatar to be set
+     * @param aSession session
+     * @param aRoom room
+     * @param aContext Android App context
+     */
+    public static void setRoomAvatar(ImageView aAvatarImageView_out, MXSession aSession, Room aRoom,  Context aContext) {
+        // sanity check
+        if ((null != aAvatarImageView_out) && (null != aSession) && (null != aRoom) && (null != aContext)) {
+            String  roomAvatarUrl = aRoom.getAvatarUrl();
+
+            // set default avatar
+            VectorUtils.setRoomVectorAvatar(aAvatarImageView_out, aRoom.getRoomId(), aSession.getMyUser().displayname);
+
+            if(!TextUtils.isEmpty(roomAvatarUrl)) {
+                // download avatar from server
+                int avatarSize = aContext.getResources().getDimensionPixelSize(org.matrix.androidsdk.R.dimen.chat_avatar_size);
+                Matrix.getInstance(aContext).getMediasCache().loadAvatarThumbnail(aSession.getHomeserverConfig(), aAvatarImageView_out, roomAvatarUrl, avatarSize);
+            }
+        }
     }
 
     //==============================================================================================================
